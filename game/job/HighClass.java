@@ -4,7 +4,7 @@ public class HighClass extends Job {
 
     @Override
     public void hunting() {
-        System.out.println("2차 스킬을 얻어 강력한 공격으로 사냥을 한다.");
+        System.out.println("2차 스킬을 얻어 100의 공격력으로 사냥을 한다.");
     }
 
     @Override

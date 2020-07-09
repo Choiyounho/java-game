@@ -1,8 +1,6 @@
 package game.monster;
 
-public abstract class Monster {
-
-    public abstract void attact();
+public class Monster {
 
     protected String name;
     protected int hp;

@@ -11,8 +11,6 @@ public class Play {
         View view = new View();
         view.intro();
 
-        // TODO :  캐릭터가 죽으면 게임이 끝나지 않고 계속 진행이됨.
-        // TODO :  발록 사냥
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("1.아이디 생성 2.게임종료");
@@ -148,16 +146,27 @@ public class Play {
                     }
                     if (input == 4) {
                         character.showInfo();
-                    }if (input == 5) {
+                    }
+                    if (input == 5) {
                         input = 0;
-                        if (character.getLevel() < 2){
+                        if (character.getLevel() < 2) {
                             System.out.println("레벨업을 더 하고 오세요");
                             continue;
                         }
-                        System.out.println("궁수로 전직하시겠습니까?");
+                        if (character.getJob().equals("궁수")) {
+                            System.out.println("당신은 이미 1차 전직을 하셨습니다. 4까지 렙업을하고 2차전직을 하세요");
+                            continue;
+                        }
+                        System.out.println("1 입력시 궁수로 전직이 됩니다.");
                         input = scanner.nextInt();
                         MiddleClass middleClass = new MiddleClass();
-                        middleClass.promote(input);
+                        if (input == 1) {
+                            middleClass.promote(input);
+                            character.setJob("궁수");
+                        } else {
+                            System.out.println("잘못누르셨습니다");
+                            continue;
+                        }
                     }
                     if (input == 6) {
                         input = 0;
@@ -166,8 +175,12 @@ public class Play {
                         input = scanner.nextInt();
                         HighClass highClass = new HighClass();
                         highClass.promote(input);
-                        if (input == 1) { character.setJob("보우마스터"); }
-                        if (input == 2) { character.setJob("신궁"); }
+                        if (input == 1) {
+                            character.setJob("보우마스터");
+                        }
+                        if (input == 2) {
+                            character.setJob("신궁");
+                        }
 //                        character.promote(input);
                     }
                     if (input == 7) {

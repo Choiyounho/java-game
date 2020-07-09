@@ -13,16 +13,6 @@ public class Mushroom extends Monster {
         return spore;
     }
 
-    // TODO: 상속을 위해 구현
     public String headbutt (){return name+"의 박치기!!";}
     public String trample (){return name+"의 내려찍기!!";}
-
-    @Override
-    public String toString() {
-        return "Normal{" +
-                " name='" + name + '\'' +
-                ", hp=" + hp +
-                ", spore='" + spore +
-                "'} ";
-    }
 }

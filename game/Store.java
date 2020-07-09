@@ -20,14 +20,17 @@ public class Store {
                 return;
             }
 
-            if (money > 0){
             System.out.println("포션 구매에 성공하셨습니다.");
             System.out.print("돈 : " + money + " -> ");
-            character.setMoney(money -=1 );
+
+            character.setMoney(money -= 1);
+
             System.out.println(money);
             System.out.print("물약 개수 : " + potion + " -> ");
+
             character.setPotion(potion += 1);
-            System.out.println(potion);}
+
+            System.out.println(potion);
         } else if (input == 2) {
             System.out.println("상점에서 나갑니다.");
         } else {

@@ -112,22 +112,5 @@ public class Character {
         System.out.println("====================");
     }
 
-    // TODO: 전직 레퍼런스 변수로 빼기
-//    public void promote(int input) {
-//        System.out.println("2차전직을 진행합니다.");
-//        System.out.println("1. 보우마스터 - 빠른 공격속도 2. 신궁 - 강한 공격력");
-//        if (input == 1) {
-//            System.out.print(job + " -> ");
-//            setJob("보우마스터");
-//            System.out.println(job);
-//            System.out.println("공격스킬이 폭풍의 시가 되고 50 데미지로 두번 공격합니다");
-//        } else if (input == 2) {
-//            System.out.print(job + " -> ");
-//            setJob("신궁");
-//            System.out.println(job);
-//            System.out.println("공격스킬이 피어싱이되고 100 데미지로 한 번 공격합니다");
-//        } else {
-//            System.out.println("잘못 입력하셨습니다.");
-//        }
-//    }
+
 }

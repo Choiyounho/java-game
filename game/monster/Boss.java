@@ -1,9 +1,9 @@
 package game.monster;
 
-public class Balog extends Monster {
+public class Boss extends Monster {
     private int shield;
 
-    public Balog(String name, int hp) {
+    public Boss(String name, int hp) {
         super(name, hp);
         this.shield = 100;
     }
